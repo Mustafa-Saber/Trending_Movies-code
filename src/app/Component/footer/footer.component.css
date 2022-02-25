@@ -44,3 +44,7 @@ p:hover {
   /* padding: 1rem; */
   cursor: pointer;
 }
+
+a {
+  color: #1a8cd8;
+}
