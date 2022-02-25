@@ -41,5 +41,6 @@ ul .inst {
 }
 p:hover {
   color: #1a8cd8;
+  /* padding: 1rem; */
   cursor: pointer;
 }
