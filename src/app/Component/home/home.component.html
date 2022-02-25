@@ -1,0 +1,112 @@
+<header id="home">
+  <div class="container d-flex vh-100 flex-column justify-content-center">
+    <h1>
+      Trending <span class="span">Movies</span>,<br />
+      TVs Shows, & More.
+    </h1>
+    <p class="pb-4">Action, Drama, Romance, Comedy</p>
+    <div>
+      <a class="rounded-pill header-btn" (click)="getStartedBtn()"
+        ><i class="fas fa-play me-2"></i>Get Started</a
+      >
+    </div>
+  </div>
+</header>
+
+<section id="trendingMovies" class="trand">
+  <div class="container">
+    <div class="row">
+      <div class="titel">
+        <h2>Top Trending Tv Shows</h2>
+      </div>
+      <div class="col-lg-3" *ngFor="let tv of trendingTv">
+        <div class="movie">
+          <div class="movie-cover">
+            <img
+              class="w-100"
+              [src]="imgPrefix + tv.poster_path"
+              [alt]="tv.title"
+            />
+          </div>
+          <div class="movie-details">
+            <div class="d-flex justify-content-between px-1">
+              <p>
+                <i class="fas fa-star fa-1x ps-2"></i> {{ tv.vote_average }}
+              </p>
+              <p>{{ tv.original_language }}</p>
+            </div>
+            <div class="d-flex justify-content-between px-3 title-movie">
+              <h5>
+                {{ tv.name }}
+              </h5>
+              <p>{{ tv.first_air_date.split("-").slice(0, 1) }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="trand">
+  <div class="container">
+    <div class="row">
+      <div class="titel">
+        <h2>Top Trending Tv Movie</h2>
+      </div>
+      <div class="col-lg-3" *ngFor="let movie of trendingMovies">
+        <div class="movie">
+          <div class="movie-cover">
+            <img
+              class="w-100"
+              [src]="imgPrefix + movie.poster_path"
+              [alt]="movie.title"
+            />
+          </div>
+          <div class="movie-details">
+            <div class="d-flex justify-content-between px-1">
+              <p>
+                <i class="fas fa-star fa-1x ps-2"></i> {{ movie.vote_average }}
+              </p>
+              <p>{{ movie.original_language }}</p>
+            </div>
+            <div class="d-flex justify-content-between px-3 title-movie">
+              <h5>
+                {{ movie.title }}
+              </h5>
+              <p>{{ movie.release_date.split("-").slice(0, 1) }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trand">
+  <div class="container">
+    <div class="row">
+      <div class="titel"><h2>Top Trending Actors</h2></div>
+      <div class="col-lg-3" *ngFor="let people of trendingPeople">
+        <div class="movie">
+          <div class="movie-cover">
+            <img
+              class="w-100"
+              [src]="imgPrefix + people.profile_path"
+              [alt]="people.title"
+            />
+          </div>
+          <div class="movie-details justify-content-end">
+            <div class="d-flex justify-content-between px-3 title-movie">
+              <h5>
+                {{ people.name }}
+              </h5>
+              <p>{{ people.known_for_department }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-small-plans></app-small-plans>

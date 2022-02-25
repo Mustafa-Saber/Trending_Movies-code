@@ -1,0 +1,57 @@
+
+header h2 {
+    color: #2b70ce;
+    font-size: 3rem;
+font-weight: bolder;
+padding-top: 1rem;
+}
+header p {
+    line-height:2.2rem;
+}
+
+
+@media screen and (max-width :950px) {
+    header h2 {
+        font-size: 2.4rem;
+    }
+}
+@media screen and (max-width:750px) {
+    header h2{
+        font-size: 1.9rem;
+    }
+}
+
+.choose {
+    background-color: #151F30;
+    border-radius: 6%;
+    margin-bottom: 2rem;
+}
+
+.choose h4 {
+    
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    background-color:#1D3D6A ;
+    color:#2F80ED;
+    margin-right:.5rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+ /* satrt style features */
+
+#features .feature  {
+padding: 0 1rem;
+    
+    /* background-color:#151F30; */
+}
+
+
+#features .feature  i{
+    color:#2F80ED;
+}
+.feature h5{
+padding-left: 1rem;
+}

@@ -1,0 +1,209 @@
+<section id="bookink">
+  <div class="container">
+    <h1>book your ticket now!</h1>
+
+    <div class="row align-items-baseline">
+      <div class="col-12 col-lg-7 col-xl-8 container-form">
+        <form
+          [formGroup]="formBook"
+          (submit)="getFOrmData(formBook)"
+          *ngIf="booking"
+        >
+          <div class="row gx-2">
+            <div class="col">
+              <label for="name" class=" "> name :</label>
+              <input
+                [ngClass]="{
+                  'is-valid': formBook.get('name')?.status === 'VALID',
+                  'is-invalid':
+                    formBook.get('name')?.status === 'INVALID' &&
+                    formBook.get('email')?.touched
+                }"
+                formControlName="name"
+                type="text"
+                name="Na"
+                id="name"
+                placeholder="Your Name"
+                class="form-control"
+              />
+
+              <div
+                *ngIf="
+                  formBook.get('name')?.errors && formBook.get('name')?.touched
+                "
+                class="alert alert-danger p-0"
+              >
+                <p *ngIf="formBook.get('name')?.errors?.['required']">
+                  name required
+                </p>
+                <p *ngIf="formBook.get('name')?.errors?.['minlength']">
+                  name is valid
+                </p>
+                <p *ngIf="formBook.get('name')?.errors?.['maxlength']">
+                  name maxLength is 22
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <label for="email"> email :</label>
+
+              <input
+                [ngClass]="{
+                  'is-valid': formBook.get('email')?.status === 'VALID',
+                  'is-invalid':
+                    formBook.get('email')?.status === 'INVALID' &&
+                    formBook.get('email')?.touched
+                }"
+                type="email"
+                name=""
+                id=""
+                formControlName="email"
+                placeholder="Your Email"
+                class="form-control"
+              />
+              <div
+                *ngIf="
+                  formBook.get('email')?.errors &&
+                  formBook.get('email')?.touched
+                "
+                class="alert alert-danger p-0"
+              >
+                <p *ngIf="formBook.get('email')?.errors?.['required']">
+                  email required
+                </p>
+                <p *ngIf="formBook.get('email')?.errors?.['email']">
+                  email is valid
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label for="movie">movie name :</label>
+            <input
+              [ngClass]="{
+                'is-valid': formBook.get('name_movie')?.status === 'VALID',
+                'is-invalid':
+                  formBook.get('name_movie')?.status === 'INVALID' &&
+                  formBook.get('email')?.touched
+              }"
+              formControlName="name_movie"
+              type="text"
+              name="movie"
+              placeholder="Movie Name"
+              id="movie"
+              class="form-control"
+            />
+            <div
+              *ngIf="
+                formBook.get('name_movie')?.errors &&
+                formBook.get('name_movie')?.touched
+              "
+              class="alert alert-danger p-0"
+            >
+              <p *ngIf="formBook.get('name_movie')?.errors?.['required']">
+                name movie required
+              </p>
+            </div>
+          </div>
+          <div>
+            <label for="time">Show Time :</label>
+            <select
+              class="form-select"
+              formControlName="time"
+              id="time"
+              aria-label="Default select example"
+            >
+              <!-- <option selected>Open this select Time</option> -->
+              <option value="7:30 AM">7:30 AM</option>
+              <option value="10:30 AM">10:30 AM</option>
+              <option value="10:30 AM">10:30 AM</option>
+              <option value="04:00 PM">04:00 PM</option>
+              <option value="06:45 PM">06:45 PM</option>
+              <option value="11:30 PM">11:30 PM</option>
+            </select>
+          </div>
+          <div>
+            <label for="seats">Number of seats :</label>
+            <select
+              class="form-select"
+              formControlName="seats"
+              id="seats"
+              aria-label="Default select example"
+            >
+              <option selecte>Open this select seats</option>
+              <!-- *ngFor="let item of items; let i=index" -->
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <div>
+            <label for="">Your message :</label>
+            <textarea
+              formControlName="textArea"
+              name=""
+              id=""
+              class="form-control"
+              row="122"
+              placeholder="Your message :"
+            ></textarea>
+          </div>
+
+          <div class="py-3">
+            <button
+              type="submit"
+              class="btn btn-info"
+              [disabled]="formBook.invalid"
+            >
+              submit
+            </button>
+          </div>
+        </form>
+
+        <div class="booked" *ngIf="booked">
+          <h2>Booked Done</h2>
+          <p>tickets will be sent to your email !</p>
+          <h3 class="email">
+            email :{{ term }} <i class="far fa-envelope"></i>
+          </h3>
+          <p>Enjoy your watching</p>
+        </div>
+      </div>
+
+      <!--   Information -->
+      <div class="col-xl-4 col-lg-3 col-12">
+        <div>
+          <h3>Information</h3>
+          <p>
+            It is a long fact that a reader will be distracted by the readable
+            content of a page when looking at its layout
+          </p>
+
+          <span><i class="fas fa-phone-alt"></i> +1 809 234-56-78</span>
+          <span class="mb-4"
+            ><i class="fas fa-paper-plane"></i> support@flixtv.com</span
+          >
+        </div>
+        <div classs="icon ">
+          <ul class="p-0">
+            <li class="facebook"><i class="fab fa-facebook"></i></li>
+            <li class="twtter"><i class="fab fa-linkedin"></i></li>
+            <li class="twtter"><i class="fab fa-twitter"></i></li>
+            <li class="inst"><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-tiktok"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- if styles -->
+<!-- 
+              [class.is-valid]="formBook.get('email')?.status==='VALID'"
+              [class.is-invalid]="formBook.get('email')?.status==='INVALID' &&formBook.get('email')?.touched" 
+              [ngClass]="{'is-valid': formBook.get('email')?.status==='VALID', 'is-invalid':formBook.get('email')?.status==='INVALID' &&formBook.get('email')?.touched}"
+            -->

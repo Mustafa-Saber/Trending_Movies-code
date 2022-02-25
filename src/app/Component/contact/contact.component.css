@@ -1,0 +1,90 @@
+h1,
+h2,
+span i {
+  color: #2f80ed;
+}
+span {
+  color: #fff;
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.container-form {
+  border-radius: 0.8rem;
+  border: 0.2rem solid #151f30;
+  padding: 1rem;
+  margin: 2.5rem 0;
+}
+label {
+  color: #2f80ed;
+  padding: 0.4rem 0;
+}
+
+input,
+select,
+textarea {
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #151f30 !important;
+  outline: none;
+  color: white;
+  border: 0;
+}
+
+.form-control:focus {
+  color: white;
+}
+/* option {
+    margan
+} */
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  max-height: 100px;
+}
+
+/*   stylles icons */
+
+ul {
+  width: 70%;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: red;
+}
+ul li {
+  background: transparent;
+  min-width: 25px;
+  min-height: 25px;
+  /* margin: 4px; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.6s;
+}
+ul li:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+ul .facebook {
+  color: #385898;
+}
+
+ul .twtter {
+  color: #1a8cd8;
+}
+ul .inst {
+  color: #db518b;
+}
+p:hover {
+  cursor: pointer;
+}
+
+.email {
+  color: #2f80ed !important;
+}

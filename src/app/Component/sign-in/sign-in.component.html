@@ -1,0 +1,40 @@
+
+<section class="vh-100">
+
+    <form [formGroup]="loginForm" (ngSubmit)="getFormData(loginForm)" class="w-50 d-flex flex-column justify-content-center h-50 m-auto">
+  <h1 class="text-center">log-in</h1>
+        <div>
+            <label for="email"> email</label>
+            <input [class.is-valid]="loginForm.get('email')?.status==='VALID'" class="form-control " type="email" name="fname" id="email" name formControlName="email">
+            <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched" class=" alert alert-danger p-1">
+                <p *ngIf="loginForm.get('email')?.errors?.['required']">
+                  email required
+                  </p>
+                  <p *ngIf="loginForm.get('email')?.errors?.['email']">
+                  email is valid
+                  </p>
+                  <p *ngIf="loginForm.get('email')?.errors?.['maxlength']">
+                  email maxLength is 22
+                  </p>
+            </div>
+        </div>
+        <div>
+            <label for="password"> password</label>
+            <input [class.is-valid]="loginForm.get('password')?.status==='VALID'"class="form-control " type="password" name="fname" id="password" name formControlName="password">
+            <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" class=" alert alert-danger p-1">
+                <p *ngIf="loginForm.get('password')?.errors?.['required']">
+                    password required
+                  </p>
+                  <p *ngIf="loginForm.get('password')?.errors?.['pattern']">
+                example  =>  password (Aaaa12)
+                  </p>
+            
+            </div>
+        </div>
+ 
+        <button [ngStyle]="{'background-color':loginForm.invalid?'grey':'#0F8BA7', 'border':loginForm.invalid?'grey':'#0F8BA7'}"  [disabled]="loginForm.invalid"  class="btn btn-info mt-3 w-25 ms-auto" type="submit" > <span *ngIf="!isWating">login</span> <span *ngIf="isWating"> wating</span></button>
+        <div *ngIf="isSuccess" class="text-center p-2 mt-2 w-50 m-auto alert alert-success
+        "> {{isSuccess}} </div>
+     
+      </form>
+</section>

@@ -1,0 +1,50 @@
+<p>trending-actors works!</p>
+<section class="mt-5 pt-2">
+    <div class="container">
+      <div class="row mt-5 justify-content-center">
+        <div class="col-md-6 col-lg-3 d-flex flex-column justify-content-center">
+          <hr class="w-50 mb-4 border-1 border" />
+          <h2>
+            trending movies <br />
+            to watch right now
+          </h2>
+          <p>trending movies to watch right now</p>
+          <hr class="w-75 mt-2 border-1 border" />
+        </div>
+  
+        <div *ngFor="let actor of trendingActors" class="col-lg-3 col-md-6">
+          <div class="actor position-relative py-2">
+            <img [src]="imgPrefix+actor.profile_path" [alt]="actor.title" class="w-100">
+            <div class="cpation">
+              <div class="vote d-flex justify-content-between px-3 pt-2">
+                <!-- <span class="p-1 bg-primary rounded-3">
+                  {{ actor.vote_average }}<i class="fas fa-star fa-1x ps-2"></i
+                ></span> -->
+                <span class="p-1 rounded-3 bg-secondary">
+                  {{ actor.known_for_department }}</span
+                >
+              </div>
+  
+              <div class="movie-details">
+                <a
+                  class="text-decoration-none"
+                  [routerLink]="['/actor', actor.id, actor.media_type]"
+                >
+                  More Details  
+                   <i class="fas fa-link  ps-2"></i>
+                </a>
+  
+                <div>
+                  <h3 class="h6 pt-3">{{ actor.title }}</h3>
+                  <h3 *ngIf="actor.media_type == 'person'" class="h6 pt-3">
+                    {{ actor.name }}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

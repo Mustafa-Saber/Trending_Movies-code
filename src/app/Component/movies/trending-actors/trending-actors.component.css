@@ -1,0 +1,41 @@
+
+a{
+    color: #fff;
+}
+a:hover{
+    color: #fff;
+}
+
+.cpation {
+    background-color:#000000b3;
+    position: absolute;
+    inset:150% 0 0 0 ;
+    overflow: hidden;
+    transition: inset .3s  linear ;
+    
+
+    
+
+}
+.actor:hover .cpation{
+    inset:0 0 0 0 ;
+/* top: 0; */
+}
+.cpation .movie-details {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+    min-height:100%;
+}
+.cpation .movie-details a{
+    padding: .3rem .6rem;
+    border-radius:7% ;
+    border: 2px solid wheat;
+}
+.cpation .movie-details a:hover{
+    background-color: #FFF;
+    color:#2F80E1;
+    border-color: #2F80E1;
+
+}

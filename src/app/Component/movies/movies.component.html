@@ -1,0 +1,41 @@
+<header>
+  <div class="container">
+    <div class="row pt-4">
+      <div class="col-lg-3 nav-title">
+        <h1>Categories</h1>
+      </div>
+      <div class="col-lg-8 ms-auto nav-btn">
+        <div class="d-flex justify-content-end">
+          <button
+            type="button"
+            class="px-4 py-2 rounded-pill me-2"
+            (click)="displayMovies()"
+            [ngClass]="{ active: showMovies === true }"
+          >
+            movies
+          </button>
+          <button
+            type="button"
+            class="px-4 py-2 rounded-pill me-2"
+            (click)="displayTvShows()"
+            [ngClass]="{ active: showTvShows === true }"
+          >
+            tv shows
+          </button>
+          <button
+            type="button"
+            class="px-4 py-2 rounded-pill me-2"
+            (click)="displayActors()"
+            [ngClass]="{ active: showActors === true }"
+          >
+            actors
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<app-trending-movies *ngIf="showMovies"></app-trending-movies>
+<app-trending-tv *ngIf="showTvShows"></app-trending-tv>
+<app-trending-actors *ngIf="showActors"></app-trending-actors>

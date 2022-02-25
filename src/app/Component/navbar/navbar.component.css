@@ -1,0 +1,14 @@
+.active {
+  color: #fff !important;
+}
+nav {
+  transition: bacound-colorkgr 0.5s 0.5s ease-in-out, opacity 0.5s linear;
+}
+
+.navShow {
+  position: fixed;
+  width: 100%;
+  background-color: #131722 !important;
+  opacity: 0.7;
+  z-index: 999999;
+}

@@ -1,0 +1,29 @@
+#notfound{
+
+    background-image: url(../../../assets/signbg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:center  ;
+    height: 100vh;
+}
+.notfound-content{
+    width: fit-content;
+    padding: 50px;
+    border-radius: 16px;
+    background-color: #131720;
+    border: 1px solid #151f30;
+}
+h1 {
+    font-size: 3rem;
+    color: #2f80ed;
+font-weight: 900;
+
+}
+
+a {
+    padding: 8px 15px;
+    border-radius: 12px;
+    color:#FFF;
+    background-color: #2f80ed;
+    text-decoration: none;
+}

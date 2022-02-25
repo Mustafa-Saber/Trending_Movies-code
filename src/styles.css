@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Dancing+Script&family=Quintessential&display=swap');
+
+
+*{
+    padding: 0;
+    border: 0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color:#131722 !important;
+    color:#fff;
+    font-family: 'Quintessential', cursive;
+   text-transform: capitalize;
+}
+

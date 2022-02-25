@@ -1,0 +1,15 @@
+span {
+  color: #2f80ed;
+}
+
+.overview {
+  line-height: 35px;
+  max-height: 200px;
+  width: 95%;
+  color: white;
+  transition: max-height 0.75s ease-out;
+  overflow: hidden;
+}
+.overview:hover {
+  max-height: 600px;
+}

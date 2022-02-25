@@ -1,0 +1,50 @@
+<section class="m-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 position-relative">
+        <div class="movie">
+          <img
+            class="w-100"
+            [src]="imgPrefix + actrDtetails.profile_path"
+            alt="000"
+          />
+
+          <div>
+            <div class="vote top-0 end-0 pt-2 position-absolute">
+              <span class="p-1 rounded-3 bg-primary">
+                {{ actrDtetails.vote_average }}</span
+              >
+            </div>
+            <div class="lang top-0 start-0 pb-2 position-absolute">
+              <span class="p-1 rounded-3 bg-secondary">
+                {{ actrDtetails.original_language }}</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-7 offset-1">
+        <div class="cpation">
+          <h2 class="pt-3">{{ actrDtetails.name }}</h2>
+          <p class="mt-5">{{ actrDtetails.overview }}</p>
+        </div>
+        <div class="col-md-12 d-flex justify-content-between">
+          <div class="actor-info">
+            <p><span>Birthday:</span> {{ actrDtetails.birthday }}</p>
+            <p><span>Place Of birth:</span>{{ actrDtetails.place_of_birth }}</p>
+            <p>
+              <span>Actor Role:</span> {{ actrDtetails.known_for_department }}
+            </p>
+          </div>
+        </div>
+        <div class="col-md-12 pt-3">
+          <div class="actor-overview">
+            <h5><span>Biography</span></h5>
+            <p class="overview">{{ actrDtetails.biography }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

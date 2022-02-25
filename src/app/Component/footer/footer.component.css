@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+footer {
+  background-color: #131924;
+  color: #fff;
+  padding: 3rem 0 2rem;
+}
+footer ul {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: red;
+}
+ul li {
+  background: transparent;
+  min-width: 25px;
+  min-height: 25px;
+  /* margin: 4px; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.6s;
+}
+ul li:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+ul .facebook {
+  color: #385898;
+}
+
+ul .twtter {
+  color: #1a8cd8;
+}
+ul .inst {
+  color: #db518b;
+}
+p:hover {
+  color: #1a8cd8;
+  cursor: pointer;
+}
