@@ -1,11 +1,4 @@
 
-a{
-    color: #fff;
-}
-a:hover{
-    color: #fff;
-}
-
 .cpation {
     background-color:#000000b3;
     position: absolute;
@@ -29,9 +22,11 @@ a:hover{
     min-height:100%;
 }
 .cpation .movie-details a{
+    color: #FFF;
     padding: .3rem .6rem;
-    border-radius:7% ;
+    border-radius:15px ;
     border: 2px solid wheat;
+    transition:  background-color .5s linear ;
 }
 .cpation .movie-details a:hover{
     background-color: #FFF;

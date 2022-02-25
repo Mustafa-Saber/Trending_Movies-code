@@ -41,7 +41,7 @@
           </div>
           <p class="h5">runtime : " {{ moveDtetails.runtime }} minut "</p>
           <p class="fw-bold h5">
-            release date : {{ moveDtetails.release_date.sort("-") }}
+            release date :  {{ moveDtetails.release_date?.split("-").slice(0, 1) }}
           </p>
         </div>
         <div class="col-md-12 pt-3">

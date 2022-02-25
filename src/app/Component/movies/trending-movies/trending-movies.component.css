@@ -1,9 +1,3 @@
-a {
-  color: #fff;
-}
-a:hover {
-  color: #fff;
-}
 
 .cpation {
   background-color: #000000b3;
@@ -24,13 +18,17 @@ a:hover {
   justify-content: space-evenly;
   min-height: 100%;
 }
-.cpation .movie-details a {
-  padding: 0.3rem 0.6rem;
-  border-radius: 7%;
+.cpation .movie-details a{
+  color: #FFF;
+  padding: .3rem .6rem;
+  border-radius:15px ;
   border: 2px solid wheat;
+  transition:  background-color .5s linear ;
 }
-.cpation .movie-details a:hover {
-  background-color: #fff;
-  color: #2f80e1;
-  border-color: #2f80e1;
+.cpation .movie-details a:hover{
+  background-color: #FFF;
+  color:#2F80E1;
+  border-color: #2F80E1;
+
 }
+

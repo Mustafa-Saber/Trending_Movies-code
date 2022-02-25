@@ -1,30 +1,13 @@
-a {
-  color: #fff;
-}
-a:hover {
-  color: #fff;
+.movie-controls{
+
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
-.cpation {
-  background-color: #000000b3;
-  position: absolute;
-  inset: 150% 0 0 0;
-  overflow: hidden;
-}
-h1 {
-  color: #2f80e1;
-}
-.people:hover .cpation {
-  inset: 0 0 0 0;
-  /* top: 0; */
-}
-.cpation .movie-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  min-height: 100%;
-}
+
 button {
   text-transform: uppercase;
   background-color: #131720;
@@ -33,7 +16,7 @@ button {
 }
 button:hover,
 .active {
-  background-color: lightsteelblue;
+  background-color: #fff;
 }
 
 .nav-title {
@@ -42,6 +25,29 @@ button:hover,
   /* padding: .5rem; */
   transform: skew(0deg, 10deg);
 }
+
+@media screen and (max-width:990px) {
+  .movie-controls{
+    flex-direction: column;  
+    align-items:center;
+    justify-content:space-between;
+    
+  }
+  .nav-title {
+ 
+    transform: skew(0deg, 0deg);
+  }
+  .btn-group{
+    padding-top:2rem;
+    justify-content:center
+
+  }
+  button{
+    font-size :.7rem
+  }  
+
+}
+
 /* .nav-btn{
 
     transform: skew(0deg, 10deg);

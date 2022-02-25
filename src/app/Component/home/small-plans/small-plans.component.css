@@ -1,64 +1,69 @@
-#plans{
-    padding: 5rem 1rem;
+#plans {
+  padding: 5rem 1rem;
 }
 .parent-plan {
-background-color: #151F30 !important;
-border-radius:5%;
-box-shadow: 1px 1px 2px black, 0 0 25px rgb(198, 198, 218), 0 0 5px darkblue;
-/* box-shadow: 1px 1px 2px black, 0 0 25px rgb(198, 198, 218), 0 0 50px rgb(149, 149, 221); */
+  background-color: #151f30 !important;
+  border-radius: 5%;
+  box-shadow: 1px 1px 2px black, 0 0 25px rgb(198, 198, 218), 0 0 5px darkblue;
+  /* box-shadow: 1px 1px 2px black, 0 0 25px rgb(198, 198, 218), 0 0 50px rgb(149, 149, 221); */
 }
-.paln h3 , h4 {
-    padding : 1rem  ;
-    border-bottom: .1rem solid #2f80ed ;
-    margin-bottom: 2.5rem;
-
-
-}
-.plan-center{
-transform: scale(1.1);
+.paln h3,
+h4 {
+  padding: 1rem;
+  border-bottom: 0.1rem solid #2f80ed;
+  margin-bottom: 2.5rem;
 }
 
-.parent-plan-center{
-    background-color: #2B70CE !important;
-    border-radius:5%;
-box-shadow: 1px 1px 2px black, 0 0 25px rgb(198, 198, 218), 0 0 5px darkblue;
+.plan-center {
+    transform: scale(1.1);
+}
 
+.parent-plan-center {
+  background-color: #2b70ce !important;
+  border-radius: 5%;
+  box-shadow: 1px 1px 2px black, 0 0 25px rgb(198, 198, 218), 0 0 5px darkblue;
 }
 .paln h4 {
-    font-size: .8rem;
+  font-size: 0.8rem;
 }
 .paln h4 span {
-    font-size: 2rem;
-    padding-right:.3rem
+  font-size: 2rem;
+  padding-right: 0.3rem;
 }
-.plan-btn{
-    padding: .6rem .8rem  ;
-    background-color: #131720;
-    color: #FFF;
-    text-transform: uppercase ;
-    transition: background-color .5s linear ,color .5s  linear;
+.plan-btn {
+  padding: 0.6rem 0.8rem;
+  background-color: #131720;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.5s linear, color 0.5s linear;
 }
-.plan-btn:hover{
-    background-color: #2B70CE;
-}
-
-.parent-plan-center .plan-btn:hover{
-    background-color: #fff;
-    color:#000
-
+.plan-btn:hover {
+  background-color: #2b70ce;
 }
 
-
-
-
-
-.red
-{
-    color: red;
-    padding-right:.6rem;
+.parent-plan-center .plan-btn:hover {
+  background-color: #fff;
+  color: #000;
 }
-.green
-{
-    padding-right:.6rem;
-    color: green;
+
+.red {
+  color: red;
+  padding-right: 0.6rem;
+}
+.green {
+  padding-right: 0.6rem;
+  color: green;
+}
+
+
+
+@media screen and (max-width:990px) {
+    .parent-plan ,.parent-plan-center {
+    box-shadow:none;
+    border-radius:7px;
+    margin-top:1rem
+    }
+    .plan-center {
+        transform: scale(1);
+    }
 }
