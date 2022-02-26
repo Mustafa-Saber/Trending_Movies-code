@@ -48,13 +48,9 @@ export class ContactComponent implements OnInit {
 
   getFOrmData(formBook: FormGroup) {
     this.term = formBook.get('email')?.value;
-    console.log(formBook);
-
-    console.log(11);
 
     if (this.formBook.status == 'VALID') {
       this.container.push(this.formBook.value);
-
       localStorage.setItem('movie', JSON.stringify(this.container));
       this.booking = !this.booking;
       this.booked = !this.booked;
@@ -63,7 +59,7 @@ export class ContactComponent implements OnInit {
       setTimeout(() => {
         this.booking = !this.booking;
         this.booked = !this.booked;
-      }, 22000);
+      }, 30000);
     }
   }
 }

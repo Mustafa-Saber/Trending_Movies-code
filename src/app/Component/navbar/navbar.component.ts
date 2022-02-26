@@ -44,6 +44,9 @@ export class NavbarComponent implements OnInit {
 
   navActive(event: any) {
     let nav = Array.from(document.querySelectorAll('.nav-component li a'));
+    let navbarShow =Array.from( document.querySelectorAll('#navbarSupportedContent '));
+console.log(navbarShow)
+navbarShow[0].classList.remove('show');
 
     for (let i = 0; i < nav.length; i++) {
       nav[i].classList.remove('active');

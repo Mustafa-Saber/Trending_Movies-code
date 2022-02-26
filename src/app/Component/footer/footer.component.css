@@ -19,13 +19,11 @@ ul li {
   background: transparent;
   min-width: 25px;
   min-height: 25px;
-  /* margin: 4px; */
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s;
-width: 100%;
 text-align: center; 
 
 }
