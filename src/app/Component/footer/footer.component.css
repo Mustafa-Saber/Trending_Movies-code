@@ -13,6 +13,7 @@ footer ul {
   display: flex;
   justify-content: space-between;
   color: red;
+  
 }
 ul li {
   background: transparent;
@@ -24,6 +25,9 @@ ul li {
   justify-content: center;
   align-items: center;
   transition: background-color 0.6s;
+width: 100%;
+text-align: center; 
+
 }
 ul li:hover {
   background-color: #fff;
@@ -47,4 +51,11 @@ p:hover {
 
 a {
   color: #1a8cd8;
+}
+
+
+.reserved{
+  border-top: 1px solid #1a8cd8;
+  width: 75%;
+  padding: 2rem 0;
 }
