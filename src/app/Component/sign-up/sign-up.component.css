@@ -1,0 +1,23 @@
+
+
+input,
+select {
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #151f30 !important;
+  outline: none;
+  color: white;
+  border: 0;
+}
+
+.form-control:focus {
+  color: white;
+}
+
+
+@media screen and (max-width:750px) {
+    form {
+        
+        width: 100% !important;
+    }
+}

@@ -63,4 +63,12 @@ navbarShow[0].classList.remove('show');
     // window.scrollTo(0, 0)
     // console.log(event);
   }
+clickNav (){
+  // let navMedia = Array.from(document.querySelectorAll('.media li a'));
+  let navbarShow =Array.from( document.querySelectorAll('#navbarSupportedContent '));
+  navbarShow[0].classList.remove('show')
+
+
+}
+
 }

@@ -1,6 +1,6 @@
 
 <section class="vh-100">
-
+<div class="container">
     <form [formGroup]="loginForm" (ngSubmit)="getFormData(loginForm)" class="w-50 d-flex flex-column justify-content-center h-50 m-auto">
   <h1 class="text-center">log-in</h1>
         <div>
@@ -32,9 +32,10 @@
             </div>
         </div>
  
-        <button [ngStyle]="{'background-color':loginForm.invalid?'grey':'#0F8BA7', 'border':loginForm.invalid?'grey':'#0F8BA7'}"  [disabled]="loginForm.invalid"  class="btn btn-info mt-3 w-25 ms-auto" type="submit" > <span *ngIf="!isWating">login</span> <span *ngIf="isWating"> wating</span></button>
+        <button [ngStyle]="{'background-color':loginForm.invalid?'grey':'#0F8BA7', 'border':loginForm.invalid?'grey':'#0F8BA7'}"  [disabled]="loginForm.invalid"  class="btn btn-info mt-3 w-25 ms-lg-auto" type="submit" > <span *ngIf="!isWating">login</span> <span *ngIf="isWating"> wating</span></button>
         <div *ngIf="isSuccess" class="text-center p-2 mt-2 w-50 m-auto alert alert-success
         "> {{isSuccess}} </div>
      
       </form>
+    </div>
 </section>

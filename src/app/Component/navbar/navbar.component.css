@@ -1,5 +1,5 @@
 .active {
-  color: #fff !important;
+  color: #fff ;
 border-bottom: 3px solid #385898;
 }
 nav {
@@ -13,4 +13,29 @@ nav {
   background-color: #131722 !important;
   opacity: 0.7;
   z-index: 999999;
+  
+}
+ul li {
+  cursor: pointer;
+}
+
+
+.fa-sign-in-alt ,.fa-power-off{
+  color: #6b8ac9 !important;
+  border: 0 !important;
+}
+
+
+ul .facebook i {
+  color: #385898 !important ;
+}
+ul .youtube i {
+  color: red !important ;
+}
+
+ul .twtter i {
+  color: #1a8cd8;
+}
+ul .insta i {
+  color: #db518b;
 }

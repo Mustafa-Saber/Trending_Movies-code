@@ -78,7 +78,7 @@
             </div>
         </div>
         <button [ngStyle]="{'background-color':registerForm.invalid?'grey':'#0F8BA7' , 'border':registerForm.invalid?'grey':'0F8BA7'
-      }" [disabled]="registerForm.invalid"  class="btn btn-info mt-3 w-25 ms-auto" type="submit" > <span *ngIf="!isWating">register</span> <span *ngIf="isWating"> wating</span></button>
+      }" [disabled]="registerForm.invalid"  class="btn btn-info mt-3 w-25 ms-lg-auto" type="submit" > <span *ngIf="!isWating">register</span> <span *ngIf="isWating"> wating</span></button>
    <div *ngIf="isSuccess" class="text-center p-2 mt-2 w-50 m-auto alert alert-success
    "> {{isSuccess}} </div>
     

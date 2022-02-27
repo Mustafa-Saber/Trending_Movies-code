@@ -14,9 +14,10 @@ button {
   color: #2f80e1;
   border-color: #2f80e1;
 }
-button:hover,
-.active {
-  background-color: #fff;
+
+.active{
+color: white;
+border-bottom: 3px solid #2f80e1;
 }
 
 .nav-title {
@@ -33,10 +34,10 @@ button:hover,
     justify-content:space-between;
     
   }
-  .nav-title {
+  /* .nav-title {
  
-    /* transform: skew(0deg, 0deg); */
-  }
+    transform: skew(0deg, 0deg);
+  } */
   .nav-btn{
     padding-top:2rem;
     justify-content:center !important

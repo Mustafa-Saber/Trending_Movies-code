@@ -36,41 +36,43 @@
           <a class="nav-link" routerLink="bookink">Bookink</a>
         </li>
       </ul>
-      <ul class="navbar-nav ms-auto mb-3 d-lg-flex d-sm-none flex-row mb-lg-0">
-        <li dclass="nav-item  ps-2">
-          <a class="nav-link " aria-current="page" routerLink="home"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </li>
-        <li class="nav-item ps-2">
-          <a class="nav-link" routerLink="home"
+      <ul class="media  navbar-nav ms-auto mb-3 d-lg-flex d-sm-none flex-row mb-lg-0">
+   
+        <li class="nav-item ps-2 facebook">
+          <a class="nav-link" 
             ><i class="fab fa-facebook"></i
           ></a>
         </li>
 
-        <li class="nav-item ps-2">
-          <a class="nav-link" routerLink="home"
+        <li  class="nav-item insta  ps-2">
+          <a class="nav-link " aria-current="page" 
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+
+        <li class="nav-item ps-2 twtter">
+          <a class="nav-link" 
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li class="nav-item ps-2 youtube">
+          <a class="nav-link"
             ><i class="fab fa-youtube"></i
           ></a>
         </li>
 
-        <li class="nav-item ps-2">
-          <a class="nav-link" routerLink="home"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
       </ul>
-      <ul class="navbar-nav ms-3 mb-2 mb-lg-0">
-        <li *ngIf="!isLogin" class="nav-item">
+      <ul class=" nav-component navbar-nav ms-3 mb-2 mb-lg-0">
+        <li (click)="navActive($event)" *ngIf="!isLogin" class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="signIn">
+            <i class="fas fa-sign-in-alt pe-2 text-info"></i>
             login
-            <i class="fas fa-sign-in-alt ps-2 text-info"></i>
           </a>
         </li>
-        <li *ngIf="!isLogin" class="nav-item">
+        <li (click)="navActive($event)" *ngIf="!isLogin" class="nav-item">
           <a class="nav-link" routerLink="signUp">register</a>
         </li>
-        <li *ngIf="isLogin" class="nav-item">
+        <li (click)="navActive($event)" *ngIf="isLogin" class="nav-item">
           <a
             class="nav-link"
             (click)="this._AuthService.logOut()"
