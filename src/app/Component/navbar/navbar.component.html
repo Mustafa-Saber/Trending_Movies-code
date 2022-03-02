@@ -27,7 +27,7 @@
           >
         </li>
         <li (click)="navActive($event)" class="nav-item">
-          <a class="nav-link" routerLink="movies">Movies</a>
+          <a class="nav-link" [routerLink]="['/Trending','movies']">Movies</a>
         </li>
         <li (click)="navActive($event)" class="nav-item">
           <a class="nav-link" routerLink="about-us">aboutb us</a>

@@ -9,7 +9,6 @@ import { SignInComponent } from './Component/sign-in/sign-in.component';
 import { SignUpComponent } from './Component/sign-up/sign-up.component';
 import { ProfileComponent } from './Component/profile/profile.component';
 import { NavbarComponent } from './Component/navbar/navbar.component';
-import { MoviesDetailsComponent } from './Component/movies-details/movies-details.component';
 import { MoviesComponent } from './Component/movies/movies.component';
 import { HomeComponent } from './Component/home/home.component';
 import { AboutComponent } from './Component/about/about.component';
@@ -23,6 +22,8 @@ import { SmallPlansComponent } from './Component/home/small-plans/small-plans.co
 import { HttpClientModule } from '@angular/common/http';
 import { ActorDetailsComponent } from './Component/movies/trending-actors/actor-details/actor-details.component';
 import { ScrollTopBtnComponent } from './Component/scroll-top-btn/scroll-top-btn.component';
+import { MovieDetailsComponent } from './Component/movies/trending-movies/movie-details/movie-details.component';
+import { TvDetailsComponent } from './Component/movies/trending-tv/tv-details/tv-details.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,6 @@ import { ScrollTopBtnComponent } from './Component/scroll-top-btn/scroll-top-btn
     SignUpComponent,
     ProfileComponent,
     NavbarComponent,
-    MoviesDetailsComponent,
     MoviesComponent,
     HomeComponent,
     AboutComponent,
@@ -43,7 +43,9 @@ import { ScrollTopBtnComponent } from './Component/scroll-top-btn/scroll-top-btn
     TrendingTvComponent,
     SmallPlansComponent,
     ActorDetailsComponent,
-    ScrollTopBtnComponent
+    ScrollTopBtnComponent,
+    MovieDetailsComponent,
+    TvDetailsComponent
   ],
   imports: [
     BrowserModule,

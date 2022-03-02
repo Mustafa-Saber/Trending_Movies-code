@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/auth.service';
@@ -33,7 +34,7 @@ export class SignUpComponent implements OnInit {
       Validators.required,
     ]),
   });
-  constructor(public _AuthService: AuthService) {}
+  constructor(public _AuthService: AuthService , private _Router:Router) {}
 
   ngOnInit(): void {}
   getFormData(registerForm: FormGroup) {
@@ -44,7 +45,11 @@ export class SignUpComponent implements OnInit {
           this.registerForm.reset();
           this.isSuccess = data.message;
           this.isWating = false;
-
+          
+          setTimeout(() => {
+            this._Router.navigate(['/signIn'])
+            
+          }, 1000);
           setTimeout(() => {
             this.isSuccess = '';
           }, 100000);

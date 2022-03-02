@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Comforter&family=Dancing+Script&family=Quintessential&display=swap');
+
+h1 ,p ,span , a {
+
+font-family: 'Cairo', sans-serif ,'Comforter', cursive, 'Dancing Script', cursive,'Quintessential', cursive !important;
+
+}
+h1{
+/* font-family: 'Quintessential', cursive !important; */
+
+    font-weight: 900;
+}
+.span{
+    color:#2f80ed
+}
+.movie-info p {
+    color: #2f80ed;
+    margin-bottom: 1.5rem;
+}
+.movie-info p span {
+    color:#fff;
+    margin-right: 6px;
+    font-weight: 400;
+}
+
+.overview  h5{
+    font-size: 24px;
+    font-weight: 600;
+}
+.overview  p{
+width:90%;
+line-height: 35px;
+}
+.trailer a {
+text-decoration: none;
+color: #2f80ed;
+padding: 15px 30px;
+border:2px solid #2f80ed;
+border-radius: 10px;
+transition:.5s
+}
+
+.trailer a:hover {
+background-color: #2f80ed;
+    color: #FFF;
+}

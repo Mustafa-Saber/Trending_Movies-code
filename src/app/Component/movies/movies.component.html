@@ -12,7 +12,8 @@
             (click)="displayMovies()"
             [ngClass]="{ active: showMovies === true }"
           >
-            movies
+          <a class="nav-link" [routerLink]="['/Trending','movies']">
+            movies</a>
           </button>
           <button
             type="button"
@@ -20,7 +21,8 @@
             (click)="displayTvShows()"
             [ngClass]="{ active: showTvShows === true }"
           >
-            tv shows
+          <a class="nav-link" [routerLink]="['/Trending','Tv_Shows']">
+            tv shows</a>
           </button>
           <button
             type="button"
@@ -28,7 +30,8 @@
             (click)="displayActors()"
             [ngClass]="{ active: showActors === true }"
           >
-            actors
+          <a class="nav-link" [routerLink]="['/Trending','actors']">
+            actors</a>
           </button>
         </div>
       </div>

@@ -1,7 +1,4 @@
-.active {
-  color: #fff ;
-border-bottom: 3px solid #385898;
-}
+
 nav {
   transition: bacound-colorkgr 0.5s 0.5s ease-in-out, opacity 0.5s linear;
 }
@@ -17,8 +14,21 @@ nav {
 }
 ul li {
   cursor: pointer;
-}
+  margin:3px;
 
+}
+ul li a{
+
+  border-bottom: 3px solid transparent;
+}
+ul li a:hover {
+  color: #1a8cd8 !important ;
+  border-bottom: 3px solid #385898;
+}
+.active  {
+  color: #1a8cd8 !important ;
+border-bottom: 3px solid #385898;
+}
 
 .fa-sign-in-alt ,.fa-power-off{
   color: #6b8ac9 !important;

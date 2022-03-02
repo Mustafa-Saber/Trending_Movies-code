@@ -1,0 +1,46 @@
+<section class="m-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-4 position-relative">
+          <div class="movie">
+            <img
+              [src]="imgPrefix + TvDtetails.poster_path"
+              [alt]="TvDtetails.title"
+              class="w-100 rounded-3"
+            />
+          </div>
+        </div>
+  
+  
+  
+        <div class="col-md-7 ">
+          <div class="titles">
+            <h1 class="pt-3 mt-4 fw-bolder">{{ TvDtetails.name }}</h1>
+                          <h4 class="text-muted">"{{TvDtetails.tagline}}"</h4>
+            <!-- <p class="mt-5">{{ TvDtetails.overview }} </p> -->
+          </div>
+  
+          <div class="movie-info mt-4">
+            <p  class="h5"><span>Language :</span> {{TvDtetails.languages}}</p>            
+            <p  class="h5"><span>Release Date:</span> {{TvDtetails.first_air_date}}</p>            
+            <p  class="h5"><span>Rate:</span> {{TvDtetails.vote_average}}/10 <i class="fas fa-star text-warning ml-1 mr-2"></i> • &nbsp; {{TvDtetails.vote_count}} Vote</p>            
+           <p class="h5">Episodes : <span>{{TvDtetails.number_of_episodes}}</span></p>
+           <p class="h5">Seasons: : <span>{{TvDtetails.number_of_seasons}}</span></p>
+            <p *ngFor="let movie of TvDtetails.production_countries">
+              <span>production countries : </span>  {{ movie.name }}
+            </p> 
+        </div>
+  
+       <div class="overview">
+         <h5>overvoew</h5>
+         <p> {{TvDtetails.overview}}</p>
+       </div>
+  
+       <div class="trailer d-flex justify-content-evenly">
+         <a  [href]="TvDtetails.homepage" target="_blink"> watch trailer</a>
+       </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

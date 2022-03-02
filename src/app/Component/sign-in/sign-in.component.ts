@@ -40,7 +40,7 @@ export class SignInComponent implements OnInit {
           }, 10000);
           localStorage.setItem('userToken' ,respon.token)
           this._AuthService.saveUserData();
-          this._Router.navigate(['/home'])
+          this._Router.navigate(['/Trending','movies'])
          
           
         }else{
