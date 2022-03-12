@@ -1,19 +1,18 @@
-<header>
+<header class="d-lg-none dsm-block">
   <div class="container">
-    <div class="row pt-4   movie-controls justify-content-between ">
+    <div class="row pt-4 movie-controls justify-content-between">
       <div class="col-lg-3 nav-title">
         <h1>Categories</h1>
       </div>
       <div class="col-lg-6 nav-btn d-flex justify-content-end">
-        <div class=" btn-group   ">
+        <div class="btn-group">
           <button
             type="button"
-            class="px-lg-4  py-2 rounded-pill me-2"
+            class="px-lg-4 py-2 rounded-pill me-2"
             (click)="displayMovies()"
             [ngClass]="{ active: showMovies === true }"
           >
-          <a class="nav-link" [routerLink]="['/Trending','movies']">
-            movies</a>
+            <a class="nav-link" [routerLink]="['/movies', UrlNum]"> movies</a>
           </button>
           <button
             type="button"
@@ -21,8 +20,7 @@
             (click)="displayTvShows()"
             [ngClass]="{ active: showTvShows === true }"
           >
-          <a class="nav-link" [routerLink]="['/Trending','Tv_Shows']">
-            tv shows</a>
+            <a class="nav-link" [routerLink]="['/Tv', UrlNum]"> tv shows</a>
           </button>
           <button
             type="button"
@@ -30,8 +28,7 @@
             (click)="displayActors()"
             [ngClass]="{ active: showActors === true }"
           >
-          <a class="nav-link" [routerLink]="['/Trending','actors']">
-            actors</a>
+            <a class="nav-link" [routerLink]="['/actors', UrlNum]"> actors</a>
           </button>
         </div>
       </div>

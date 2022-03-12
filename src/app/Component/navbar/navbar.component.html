@@ -27,7 +27,35 @@
           >
         </li>
         <li (click)="navActive($event)" class="nav-item">
-          <a class="nav-link" [routerLink]="['/Trending','movies']">Movies</a>
+          <a
+            class="nav-link d-sm-block d-lg-none"
+            [routerLink]="['/Trending', 'movies', 1]"
+            >Trending</a
+          >
+        </li>
+
+        <li
+          class="d-sm-none d-lg-inline-block"
+          ngbDropdown
+          #myDrop="ngbDropdown"
+        >
+          <button
+            class="btn btn-outline-primary me-2"
+            id="dropdownManual"
+            ngbDropdownAnchor
+            (focus)="myDrop.open()"
+          >
+            Toggle dropdown
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownManual">
+            <button ngbDropdownItem [routerLink]="['/movies', 1]">
+              movies
+            </button>
+            <button ngbDropdownItem [routerLink]="['/Tv', 1]">tv shows</button>
+            <button ngbDropdownItem [routerLink]="['/actors', 1]">
+              actors
+            </button>
+          </div>
         </li>
         <li (click)="navActive($event)" class="nav-item">
           <a class="nav-link" routerLink="about-us">aboutb us</a>
@@ -36,33 +64,27 @@
           <a class="nav-link" routerLink="bookink">Bookink</a>
         </li>
       </ul>
-      <ul class="media  navbar-nav ms-auto mb-3 d-lg-flex d-sm-none flex-row mb-lg-0">
-   
+      <ul
+        class="media navbar-nav ms-auto mb-3 d-lg-flex d-sm-none flex-row mb-lg-0"
+      >
         <li class="nav-item ps-2 facebook">
-          <a class="nav-link" 
-            ><i class="fab fa-facebook"></i
-          ></a>
+          <a class="nav-link"><i class="fab fa-facebook"></i></a>
         </li>
 
-        <li  class="nav-item insta  ps-2">
-          <a class="nav-link " aria-current="page" 
+        <li class="nav-item insta ps-2">
+          <a class="nav-link" aria-current="page"
             ><i class="fab fa-instagram"></i
           ></a>
         </li>
 
         <li class="nav-item ps-2 twtter">
-          <a class="nav-link" 
-            ><i class="fab fa-twitter"></i
-          ></a>
+          <a class="nav-link"><i class="fab fa-twitter"></i></a>
         </li>
         <li class="nav-item ps-2 youtube">
-          <a class="nav-link"
-            ><i class="fab fa-youtube"></i
-          ></a>
+          <a class="nav-link"><i class="fab fa-youtube"></i></a>
         </li>
-
       </ul>
-      <ul class=" nav-component navbar-nav ms-3 mb-2 mb-lg-0">
+      <ul class="nav-component navbar-nav ms-3 mb-2 mb-lg-0">
         <li (click)="navActive($event)" *ngIf="!isLogin" class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="signIn">
             <i class="fas fa-sign-in-alt pe-2 text-info"></i>

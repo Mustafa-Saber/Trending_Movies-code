@@ -1,18 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Dancing+Script&family=Quintessential&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Dancing+Script&family=Quintessential&display=swap');
-
-
-*{
-    padding: 0;
-    border: 0;
-    margin:0;
-    box-sizing: border-box;
-
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color:#131722 !important;
-    color:#fff;
-    font-family: 'Quintessential', cursive;
-   text-transform: capitalize;
+body {
+  background-color: #131722 !important;
+  color: #fff;
+  font-family: "Quintessential", cursive;
+  text-transform: capitalize;
 }
-
+ul.pagination {
+  display: flex;
+  justify-content: center;
+}
+ul.pagination li.page-item {
+  border: #ddd;
+}
+ul.pagination li.page-item a.page-link {
+  background-color: transparent !important;
+  border: #0d6efd;
+}

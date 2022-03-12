@@ -1,3 +1,4 @@
+import { TrendingTvComponent } from './Component/movies/trending-tv/trending-tv.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './Component/about/about.component';
@@ -12,22 +13,59 @@ import { SignUpComponent } from './Component/sign-up/sign-up.component';
 import { NotAuthGuard } from './not-auth.guard';
 import { MovieDetailsComponent } from './Component/movies/trending-movies/movie-details/movie-details.component';
 import { TvDetailsComponent } from './Component/movies/trending-tv/tv-details/tv-details.component';
+import { TrendingMoviesComponent } from './Component/movies/trending-movies/trending-movies.component';
+import { TrendingActorsComponent } from './Component/movies/trending-actors/trending-actors.component';
 
 const routes: Routes = [
-  {path:'' ,redirectTo:"home",pathMatch:"full" },
-  {path:"home" , component:HomeComponent },
-  {path:"Trending/:show" ,canActivate:[AuthGuard], component:MoviesComponent },
-  {path:"actor/:id/:media_type", canActivate:[AuthGuard], component:ActorDetailsComponent},
-  {path:"Movie-Detail/:id/:media_type", canActivate:[AuthGuard], component:MovieDetailsComponent},
-  {path:"Tv-Details/:id/:media_type", canActivate:[AuthGuard], component:TvDetailsComponent},
-  {path:"about-us" ,canActivate:[AuthGuard], component:AboutComponent },
-  {path:"bookink" ,canActivate:[AuthGuard], component:ContactComponent },
-  {path:"signUp" ,canActivate:[NotAuthGuard], component:SignUpComponent},
-  {path:"signIn" ,canActivate:[NotAuthGuard] , component:SignInComponent },
-  {path:"**" , component:NotFoundComponent }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  {
+    path: 'Trending/:Tv_Shows/:pages',
+
+    // path: 'Trending',
+    canActivate: [AuthGuard],
+    component: MoviesComponent,
+  },
+
+  {
+    path: 'movies/:pages',
+    canActivate: [AuthGuard],
+    component: TrendingMoviesComponent,
+  },
+  {
+    path: 'Tv/:pages',
+    canActivate: [AuthGuard],
+    component: TrendingTvComponent,
+  },
+  {
+    path: 'actors/:pages',
+    canActivate: [AuthGuard],
+    component: TrendingActorsComponent,
+  },
+
+  {
+    path: 'actor/:id/:media_type',
+    canActivate: [AuthGuard],
+    component: ActorDetailsComponent,
+  },
+  {
+    path: 'Movie-Detail/:id/:media_type',
+    canActivate: [AuthGuard],
+    component: MovieDetailsComponent,
+  },
+  {
+    path: 'Tv-Details/:id/:media_type',
+    canActivate: [AuthGuard],
+    component: TvDetailsComponent,
+  },
+  { path: 'about-us', canActivate: [AuthGuard], component: AboutComponent },
+  { path: 'bookink', canActivate: [AuthGuard], component: ContactComponent },
+  { path: 'signUp', canActivate: [NotAuthGuard], component: SignUpComponent },
+  { path: 'signIn', canActivate: [NotAuthGuard], component: SignInComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes , { useHash: true })],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

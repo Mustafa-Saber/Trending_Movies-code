@@ -1,4 +1,3 @@
-
 nav {
   transition: bacound-colorkgr 0.5s 0.5s ease-in-out, opacity 0.5s linear;
 }
@@ -6,31 +5,29 @@ nav {
 .navShow {
   position: fixed;
   width: 100%;
-  padding: .5rem !important;
+  padding: 0.5rem !important;
   background-color: #131722 !important;
   opacity: 0.7;
   z-index: 999999;
-  
 }
 ul li {
   cursor: pointer;
-  margin:3px;
-
+  margin: 3px;
 }
-ul li a{
-
+ul li a {
   border-bottom: 3px solid transparent;
 }
 ul li a:hover {
   color: #1a8cd8 !important ;
   border-bottom: 3px solid #385898;
 }
-.active  {
+.active {
   color: #1a8cd8 !important ;
-border-bottom: 3px solid #385898;
+  border-bottom: 3px solid #385898;
 }
 
-.fa-sign-in-alt ,.fa-power-off{
+.fa-sign-in-alt,
+.fa-power-off {
   color: #6b8ac9 !important;
   border: 0 !important;
 }
@@ -47,4 +44,21 @@ ul .twtter i {
 }
 ul .insta i {
   color: #db518b;
+}
+
+.btn-outline-primary {
+  background-color: transparent !important;
+  border: none !important;
+  color: #0d6efd;
+}
+.dropdown-menu,
+.dropdown-item {
+  background-color: #212529;
+  color: white !important;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: white;
+  color: #000 !important;
 }

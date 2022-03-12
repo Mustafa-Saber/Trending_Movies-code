@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
+ReactiveFormsModule;
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './Component/sign-in/sign-in.component';
@@ -24,6 +24,7 @@ import { ActorDetailsComponent } from './Component/movies/trending-actors/actor-
 import { ScrollTopBtnComponent } from './Component/scroll-top-btn/scroll-top-btn.component';
 import { MovieDetailsComponent } from './Component/movies/trending-movies/movie-details/movie-details.component';
 import { TvDetailsComponent } from './Component/movies/trending-tv/tv-details/tv-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -45,15 +46,17 @@ import { TvDetailsComponent } from './Component/movies/trending-tv/tv-details/tv
     ActorDetailsComponent,
     ScrollTopBtnComponent,
     MovieDetailsComponent,
-    TvDetailsComponent
+    TvDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
