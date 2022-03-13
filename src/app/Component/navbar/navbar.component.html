@@ -26,19 +26,13 @@
             >Home</a
           >
         </li>
-        <li (click)="navActive($event)" class="nav-item">
-          <a
-            class="nav-link d-sm-block d-lg-none"
-            [routerLink]="['/Trending', 'movies', 1]"
+        <li (click)="navActive($event)" class="nav-item trending-mobile">
+          <a class="nav-link" [routerLink]="['/Trending', 'movies', 1]"
             >Trending</a
           >
         </li>
 
-        <li
-          class="d-sm-none d-lg-inline-block"
-          ngbDropdown
-          #myDrop="ngbDropdown"
-        >
+        <li class="trending" ngbDropdown #myDrop="ngbDropdown">
           <button
             class="btn btn-outline-primary me-2"
             id="dropdownManual"

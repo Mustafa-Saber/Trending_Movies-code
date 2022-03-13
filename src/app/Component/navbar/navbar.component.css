@@ -62,3 +62,22 @@ ul .insta i {
   background-color: white;
   color: #000 !important;
 }
+.trending-mobile {
+  display: none;
+}
+.trending-mobile {
+  display: block;
+}
+
+.trending {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .trending-mobile {
+    display: none !important;
+    background: #fff !important;
+  }
+  .trending {
+    display: block;
+  }
+}

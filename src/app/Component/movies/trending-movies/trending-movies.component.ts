@@ -36,7 +36,7 @@ export class TrendingMoviesComponent implements OnInit {
   }
 
   pageChanged(e: any) {
-    this._Router.navigate(['/Tv', this.currentPage]);
+    this._Router.navigate(['/movies', this.currentPage]);
     this.getAllMovies(this.currentPage);
   }
 }
