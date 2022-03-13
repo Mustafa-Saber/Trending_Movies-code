@@ -23,7 +23,6 @@ export class MoviesComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     this.showTvUrl = this._ActivatedRoute.snapshot.params['Tv_Shows'];
     this.UrlNum = this._ActivatedRoute.snapshot.params['pages'];
-    console.log(this.showTvUrl);
     switch (this.showTvUrl) {
       case 'movies':
         this.displayMovies();
@@ -41,15 +40,12 @@ export class MoviesComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     this.UrlNum = this._ActivatedRoute.snapshot.params['pages'];
-
-    console.log(this.UrlNum);
   }
   displayMovies() {
     this.showMovies = true;
     this.showTvShows = false;
     this.showActors = false;
     this.UrlNum = this._ActivatedRoute.snapshot.params['pages'];
-    console.log(this.UrlNum);
   }
   displayTvShows() {
     this.showMovies = false;

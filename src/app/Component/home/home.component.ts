@@ -23,15 +23,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this._MoviesService.getMoives('movie').subscribe((response) => {
       this.trendingMovies = response.results.slice(2, 6);
-      console.log(this.trendingMovies);
     });
     this._MoviesService.getMoives('tv').subscribe((response) => {
       this.trendingTv = response.results.slice(2, 6);
-      console.log(this.trendingTv);
     });
     this._MoviesService.getMoives('person').subscribe((response) => {
       this.trendingPeople = response.results.slice(0, 4);
-      console.log(this.trendingPeople);
     });
   }
 

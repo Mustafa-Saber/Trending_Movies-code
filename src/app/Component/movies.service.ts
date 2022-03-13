@@ -16,10 +16,6 @@ export class MoviesService {
     );
   }
   getTrending(page: any, movieType: string): Observable<any> {
-    console.log(
-      `https://api.themoviedb.org/3/trending/${movieType}/week?api_key=c8c85c867880ce8e782367dd70475e2d&page=${page}`
-    );
-
     return this._HttpClient.get(
       `https://api.themoviedb.org/3/trending/${movieType}/week?api_key=c8c85c867880ce8e782367dd70475e2d&page=${page}`
     );

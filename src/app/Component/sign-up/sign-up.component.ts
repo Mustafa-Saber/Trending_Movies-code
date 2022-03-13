@@ -34,7 +34,7 @@ export class SignUpComponent implements OnInit {
       Validators.required,
     ]),
   });
-  constructor(public _AuthService: AuthService , private _Router:Router) {}
+  constructor(public _AuthService: AuthService, private _Router: Router) {}
 
   ngOnInit(): void {}
   getFormData(registerForm: FormGroup) {
@@ -45,10 +45,9 @@ export class SignUpComponent implements OnInit {
           this.registerForm.reset();
           this.isSuccess = data.message;
           this.isWating = false;
-          
+
           setTimeout(() => {
-            this._Router.navigate(['/signIn'])
-            
+            this._Router.navigate(['/signIn']);
           }, 1000);
           setTimeout(() => {
             this.isSuccess = '';

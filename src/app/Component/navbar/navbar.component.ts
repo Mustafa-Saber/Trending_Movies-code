@@ -8,9 +8,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   isLogin: boolean = false;
-  constructor(public _AuthService: AuthService) {
-    console.log(this._AuthService.userData.getValue());
-  }
+  constructor(public _AuthService: AuthService) {}
 
   ngOnInit(): void {
     this._AuthService.userData.subscribe(() => {
@@ -44,9 +42,10 @@ export class NavbarComponent implements OnInit {
 
   navActive(event: any) {
     let nav = Array.from(document.querySelectorAll('.nav-component li a'));
-    let navbarShow =Array.from( document.querySelectorAll('#navbarSupportedContent '));
-console.log(navbarShow)
-navbarShow[0].classList.remove('show');
+    let navbarShow = Array.from(
+      document.querySelectorAll('#navbarSupportedContent ')
+    );
+    navbarShow[0].classList.remove('show');
 
     for (let i = 0; i < nav.length; i++) {
       nav[i].classList.remove('active');
@@ -63,12 +62,11 @@ navbarShow[0].classList.remove('show');
     // window.scrollTo(0, 0)
     // console.log(event);
   }
-clickNav (){
-  // let navMedia = Array.from(document.querySelectorAll('.media li a'));
-  let navbarShow =Array.from( document.querySelectorAll('#navbarSupportedContent '));
-  navbarShow[0].classList.remove('show')
-
-
-}
-
+  clickNav() {
+    // let navMedia = Array.from(document.querySelectorAll('.media li a'));
+    let navbarShow = Array.from(
+      document.querySelectorAll('#navbarSupportedContent ')
+    );
+    navbarShow[0].classList.remove('show');
+  }
 }

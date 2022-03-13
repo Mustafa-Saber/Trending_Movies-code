@@ -32,7 +32,6 @@ export class TrendingActorsComponent implements OnInit {
         this.trendingActors = response.results;
         this.totalItems = response.total_results / 2;
         this.currentPage = response.page;
-        console.log(this.trendingActors);
       });
   }
 

@@ -25,7 +25,6 @@ export class ActorDetailsComponent implements OnInit {
       .getmovieDetails(this.id, this.media_type)
       .subscribe((res) => {
         this.actrDtetails = res;
-        console.log(this.actrDtetails);
       });
   }
 }

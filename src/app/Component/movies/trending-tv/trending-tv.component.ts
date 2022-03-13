@@ -23,7 +23,6 @@ export class TrendingTvComponent implements OnInit {
   ngOnInit(): void {
     this.showTvUrl = this._ActivatedRoute.snapshot.params['pages'];
     this.getAllMovies(this.showTvUrl);
-
     // localStorage.setItem('pagesNum', JSON.stringify(this.currentPage));
     // let pagNu = JSON.parse(localStorage.getItem('pagesNum') || '{}');
     // if (pagNu) {
@@ -36,7 +35,6 @@ export class TrendingTvComponent implements OnInit {
   }
 
   getAllMovies(pageNamber: number) {
-    // this._Router.navigate(['/Tv', 'Tv_Shows', event]);
     this._MoviesService.getTrending(pageNamber, 'tv').subscribe((response) => {
       this.trendingTv = response.results;
       this.totalItems = response.total_results / 2;
@@ -45,11 +43,7 @@ export class TrendingTvComponent implements OnInit {
   }
 
   pageChanged(e: any) {
-    // console.log(this.currentPage);
-    // console.log(event);
     this._Router.navigate(['/Tv', this.currentPage]);
-
-    console.log(e);
     this.getAllMovies(this.currentPage);
   }
 
