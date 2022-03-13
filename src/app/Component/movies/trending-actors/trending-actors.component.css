@@ -1,36 +1,36 @@
-
 .cpation {
-    background-color:#000000b3;
-    position: absolute;
-    inset:150% 0 0 0 ;
-    overflow: hidden;
-    transition: inset .3s  linear ;
-    
-
-    
-
+  background-color: #000000b3;
+  position: absolute;
+  inset: 150% 0 0 0;
+  overflow: hidden;
+  border-radius: 2px;
+  transition: inset 0.3s linear;
+  
 }
-.actor:hover .cpation{
-    inset:0 0 0 0 ;
-/* top: 0; */
+.actor:hover .cpation {
+  inset: 0 0 0 0;
+  /* top: 0; */
 }
 .cpation .movie-details {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:space-evenly;
-    min-height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 100%;
 }
-.cpation .movie-details a{
-    color: #FFF;
-    padding: .3rem .6rem;
-    border-radius:15px ;
-    border: 2px solid wheat;
-    transition:  background-color .5s linear ;
+.cpation .movie-details a {
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 15px;
+  border: 2px solid wheat;
+  transition: background-color 0.5s linear;
 }
-.cpation .movie-details a:hover{
-    background-color: #FFF;
-    color:#2F80E1;
-    border-color: #2F80E1;
-
+.cpation .movie-details a:hover {
+  background-color: #fff;
+  color: #2f80e1;
+  border-color: #2f80e1;
+}
+.parent img {
+  border: #ddd 2px solid;
+  border-radius: 2px;
 }

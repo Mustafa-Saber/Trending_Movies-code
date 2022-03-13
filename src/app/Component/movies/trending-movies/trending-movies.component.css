@@ -1,3 +1,7 @@
+.parent img {
+  border: #ddd 2px solid;
+  border-radius: 2px;
+}
 
 .cpation {
   background-color: #000000b3;
@@ -5,6 +9,7 @@
   inset: 150% 0 0 0;
   overflow: hidden;
   transition: inset 0.3s linear;
+  border-radius: 2px;
 }
 .movie:hover .cpation {
   inset: 0 0 0 0;
@@ -18,17 +23,15 @@
   justify-content: space-evenly;
   min-height: 100%;
 }
-.cpation .movie-details a{
-  color: #FFF;
-  padding: .3rem .6rem;
-  border-radius:15px ;
+.cpation .movie-details a {
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 15px;
   border: 2px solid wheat;
-  transition:  background-color .5s linear ;
+  transition: background-color 0.5s linear;
 }
-.cpation .movie-details a:hover{
-  background-color: #FFF;
-  color:#2F80E1;
-  border-color: #2F80E1;
-
+.cpation .movie-details a:hover {
+  background-color: #fff;
+  color: #2f80e1;
+  border-color: #2f80e1;
 }
-

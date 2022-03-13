@@ -18,8 +18,11 @@
         <hr class="w-75 mt-2 border-1 border" />
       </div>
 
-      <div *ngFor="let movie of trendingMovies" class="col-lg-3 col-md-6">
-        <div class="movie position-relative py-2">
+      <div
+        *ngFor="let movie of trendingMovies"
+        class="col-lg-3 col-md-6 d-flex flex-column justify-content-center parent py-lg-2 px-lg-2 py-2 px-4"
+      >
+        <div class="movie position-relative">
           <img
             class="w-100"
             [src]="
