@@ -36,7 +36,7 @@ export class SignInComponent implements OnInit {
           }, 10000);
           localStorage.setItem('userToken', respon.token);
           this._AuthService.saveUserData();
-          this._Router.navigate(['/Trending', 'movies']);
+          this._Router.navigate(['/Trending', 'movies', 1]);
         } else {
           this.isSuccess = respon.message;
           this.isWating = false;
